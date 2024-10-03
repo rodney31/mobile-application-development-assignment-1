@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/mortgagePaymentMainTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Payment Results"
+            android:textColor="#245F75"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/mortgagePaymentTitleTextView"
+            android:layout_width="180dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:text="Monthly Payment"
+            android:textAlignment="textEnd"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mortgagePaymentMainTitleTextView" />
+
+        <TextView
+            android:id="@+id/mortgagePaymentTextView"
+            android:layout_width="130dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mortgagePaymentMainTitleTextView" />
+
+        <TextView
+            android:id="@+id/principalTitleTextView"
+            android:layout_width="180dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="Mortgage Amount"
+            android:textAlignment="textEnd"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mortgagePaymentTitleTextView" />
+
+        <TextView
+            android:id="@+id/interestTermTitleTextView"
+            android:layout_width="180dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="Interest Rate Term"
+            android:textAlignment="textEnd"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/principalTitleTextView" />
+
+        <TextView
+            android:id="@+id/interestRateTitleTextView"
+            android:layout_width="180dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="Interest Rate Value"
+            android:textAlignment="textEnd"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/interestTermTitleTextView" />
+
+        <TextView
+            android:id="@+id/principalAmountTextView"
+            android:layout_width="130dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mortgagePaymentTextView" />
+
+        <TextView
+            android:id="@+id/interestTermAmountTextView"
+            android:layout_width="130dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/principalAmountTextView" />
+
+        <TextView
+            android:id="@+id/interestRateAmountTextView"
+            android:layout_width="130dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/interestTermAmountTextView" />
+
+        <TextView
+            android:id="@+id/amortizationTitleTextView"
+            android:layout_width="180dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="Amortization Period"
+            android:textAlignment="textEnd"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/interestRateTitleTextView" />
+
+        <TextView
+            android:id="@+id/amortizationAmountTextView"
+            android:layout_width="130dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/interestRateAmountTextView" />
+
+        <TextView
+            android:id="@+id/balanceMainTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:text="Balance after Interest Term"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/amortizationTitleTextView" />
+
+        <TextView
+            android:id="@+id/totalPaymentsTitleTextView"
+            android:layout_width="200dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:text="Total payments over term"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/balanceMainTitleTextView" />
+
+        <TextView
+            android:id="@+id/interestPaidTitleTextView"
+            android:layout_width="200dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="- Interest Paid"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/totalPaymentsTitleTextView" />
+
+        <TextView
+            android:id="@+id/principalPaidTitleTextView"
+            android:layout_width="200dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="= Principal paid"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/interestPaidTitleTextView" />
+
+        <TextView
+            android:id="@+id/balanceTitleTextView"
+            android:layout_width="200dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="Balance at end of term"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/principalPaidTitleTextView" />
+
+        <TextView
+            android:id="@+id/totalPaymentsTextView"
+            android:layout_width="130dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:textAlignment="textEnd"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/balanceMainTitleTextView" />
+
+        <TextView
+            android:id="@+id/interestPaidTextView"
+            android:layout_width="130dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:textAlignment="textEnd"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/totalPaymentsTextView" />
+
+        <TextView
+            android:id="@+id/principalPaidTextView"
+            android:layout_width="130dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:textAlignment="textEnd"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/interestPaidTextView" />
+
+        <TextView
+            android:id="@+id/balanceTextView"
+            android:layout_width="130dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:textAlignment="textEnd"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/principalPaidTextView" />
+
+        <Button
+            android:id="@+id/calculateAgainButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="57dp"
+            android:backgroundTint="#C5812F"
+            android:text="Back to Calculator"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/balanceTitleTextView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

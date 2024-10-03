@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MortgagePaymentCalculator</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">Mortgage Payment Calculator</string>
+    <string name="second_fragment_label">Mortgage Payment Calculator</string>
+</resources>

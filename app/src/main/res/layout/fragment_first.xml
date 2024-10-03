@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FirstFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/calculateButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#27B643"
+            android:text="Calculate Payments"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/paymentFrequencyTextView" />
+
+        <TextView
+            android:id="@+id/principalTextView"
+            android:layout_width="280dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="40dp"
+            android:text="Mortgage principal amount"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/calculatorDescriptionTextView" />
+
+        <EditText
+            android:id="@+id/principalEditText"
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="31dp"
+            android:ems="10"
+            android:hint="Enter amount"
+            android:inputType="numberDecimal"
+            app:layout_constraintBottom_toTopOf="@+id/principalDescriptionTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/principalTextView" />
+
+        <TextView
+            android:id="@+id/principalDescriptionTextView"
+            android:layout_width="280dp"
+            android:layout_height="35dp"
+            android:text="Typically this is the purchase price minus down payment."
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/principalEditText" />
+
+        <TextView
+            android:id="@+id/interestTextView"
+            android:layout_width="280dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="24dp"
+            android:text="Interest rate"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/principalDescriptionTextView" />
+
+        <EditText
+            android:id="@+id/interestTermEditText"
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:hint="Enter term"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/interestTextView" />
+
+        <TextView
+            android:id="@+id/interestTermDescriptionTextView"
+            android:layout_width="280dp"
+            android:layout_height="20dp"
+            android:text="Enter value in years."
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/interestTermEditText" />
+
+        <EditText
+            android:id="@+id/interestRateEditText"
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:hint="Enter your rate"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/interestTermDescriptionTextView" />
+
+        <TextView
+            android:id="@+id/interestRateDescriptionTextView"
+            android:layout_width="280dp"
+            android:layout_height="20dp"
+            android:text="Annual rate percentage. Do not include '%'"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/interestRateEditText" />
+
+        <TextView
+            android:id="@+id/amortizationTextView"
+            android:layout_width="280dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="24dp"
+            android:text="Amortization period"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/interestRateDescriptionTextView" />
+
+        <EditText
+            android:id="@+id/amortizationEditText"
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:hint="Enter period"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/amortizationTextView" />
+
+        <TextView
+            android:id="@+id/amortizationDescriptionTextView"
+            android:layout_width="280dp"
+            android:layout_height="20dp"
+            android:text="Enter your value in years."
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/amortizationEditText" />
+
+        <TextView
+            android:id="@+id/paymentFrequencyTextView"
+            android:layout_width="320dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="71dp"
+            android:text="A payment frequency of monthly payments will be used in the calculation."
+            android:textAlignment="center"
+            android:textSize="14sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/amortizationDescriptionTextView" />
+
+        <TextView
+            android:id="@+id/calculatorDescriptionTextView"
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="This Mortgage Payment Calculator can help you determine potential payments you will have for your home. Provide your mortgage principal amount, interest rate, and amortization period for your payments to be calculated with a monthly frequency."
+            android:textAlignment="center"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.488"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
